@@ -11,7 +11,3 @@ if(MSVC)
 else()
     target_compile_options(sq PRIVATE -O2 -fno-exceptions)
 endif()
-
-if(SQUIRREL_USE_WCHAR)
-    target_compile_definitions(sq PRIVATE SQUNICODE $<$<BOOL:MSVC>:_CRT_NON_CONFORMING_SWPRINTFS>)
-endif()
